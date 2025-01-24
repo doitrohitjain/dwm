@@ -1,0 +1,9 @@
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/PhpStorm 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2024-12-24T100739.404.html
+
+###
+

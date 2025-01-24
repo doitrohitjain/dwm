@@ -1,0 +1,23 @@
+# Ignore node_modules folder
+node_modules/
+documents/
+tests/
+vendor/
+dwm_node/
+tmp/
+.svn/
+storage/
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore compiled output
+/dist/
+/build/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

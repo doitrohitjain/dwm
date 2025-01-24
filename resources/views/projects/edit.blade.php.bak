@@ -1,0 +1,49 @@
+@extends('layouts.app')
+
+@section('content')
+ <h1>Update Project</h1>
+    <form action="{{ route('projects.update', $project) }}" method="POST">
+        @csrf
+        @method('PUT')
+        <label>Title:</label>
+        <input type="text" name="title" value="{{ $project->title }}" required>
+        <label>Description:</label>
+        <textarea name="description" required>{{ $project->description }}</textarea>
+        <button type="submit">Update</button>
+    </form>
+	
+	
+	
+	
+	<div class="container">
+		<h1>
+			Update Project <a href="{{ route('projects.index') }}" class='btn btn-primary'>Projects</a>
+		</h1> 
+		
+<fieldset class="border p-4 rounded">
+	<legend class="w-auto px-3 text-primary">Update Project</legend>
+	<form action="{{ route('projects.update', $project) }}" method="POST" class="mb-4" id="myForm">
+		@csrf
+		@method('PUT')
+		<div class="row"> 
+			<div class="col-md-7">
+				<div class="form-group">
+					<label for="task">Title <span class="mandatory">*</span></label>
+					<input type="text" name="title" id="title" class="form-control" value="{{ $project->title }}" placeholder="Title" required>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="description">In-depth Explanation <span class="mandatory">*</span></label>
+			<textarea name="description" id="description" class="form-control editor-class" placeholder="Task Description" >{{ @$project->description }}</textarea>
+		</div>
+		
+		<br>
+		<button type="submit" class="btn btn-success addmytask">Update Project</button>
+	</form>
+</fieldset>
+</div>
+
+@endsection
+ 
